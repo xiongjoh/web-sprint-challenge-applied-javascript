@@ -42,6 +42,98 @@ axios
         })
     })
 
+    const articleCards = document.querySelectorAll('.card')
+    const javascriptTab = document.querySelector('.tab:nth-of-type(1)')
+    const bootstrapTab = document.querySelector('.tab:nth-of-type(2)')
+    const technologyTab = document.querySelector('.tab:nth-of-type(3)')
+    const jqueryTab = document.querySelector('.tab:nth-of-type(4)')
+    const nodeTab = document.querySelector('.tab:nth-of-type(5)')
+
+    javascriptTab.addEventListener('click', () => {
+        const javascriptArticles = articles.javascript.map((article) => {
+            return article.headline
+        })
+        console.log(javascriptArticles)
+        articleCards.forEach((card) => {
+            card.classList.remove('hidden-card')
+            if (javascriptArticles.includes(card.querySelector('.headline').textContent))
+            {
+                console.log('this is a javascript article')
+            }
+            else{
+                card.classList.add('hidden-card')
+            }
+
+        })
+    })
+    bootstrapTab.addEventListener('click', () => {
+        const bootstrapArticles = articles.bootstrap.map((article) => {
+            return article.headline
+        })
+        console.log(bootstrapArticles)
+        articleCards.forEach((card) => {
+            card.classList.remove('hidden-card')
+            if (bootstrapArticles.includes(card.querySelector('.headline').textContent))
+            {
+                console.log('this is a bootstrap article')
+            }
+            else{
+                card.classList.add('hidden-card')
+            }
+
+        })
+    })
+    technologyTab.addEventListener('click', () => {
+        const technologyArticles = articles.technology.map((article) => {
+            return article.headline
+        })
+        console.log(technologyArticles)
+        articleCards.forEach((card) => {
+            card.classList.remove('hidden-card')
+            if (technologyArticles.includes(card.querySelector('.headline').textContent))
+            {
+                console.log('this is a technology article')
+            }
+            else{
+                card.classList.add('hidden-card')
+            }
+
+        })
+    })
+    jqueryTab.addEventListener('click', () => {
+        const jqueryArticles = articles.jquery.map((article) => {
+            return article.headline
+        })
+        console.log(jqueryArticles)
+        articleCards.forEach((card) => {
+            card.classList.remove('hidden-card')
+            if (jqueryArticles.includes(card.querySelector('.headline').textContent))
+            {
+                console.log('this is a jquery article')
+            }
+            else{
+                card.classList.add('hidden-card')
+            }
+
+        })
+    })
+    nodeTab.addEventListener('click', () => {
+        const nodeArticles = articles.node.map((article) => {
+            return article.headline
+        })
+        console.log(nodeArticles)
+        articleCards.forEach((card) => {
+            card.classList.remove('hidden-card')
+            if (nodeArticles.includes(card.querySelector('.headline').textContent))
+            {
+                console.log('this is a node article')
+            }
+            else{
+                card.classList.add('hidden-card')
+            }
+
+        })
+    })
   })
   .catch((err) => {
     console.log("error");
