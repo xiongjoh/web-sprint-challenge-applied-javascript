@@ -17,7 +17,7 @@ axios.get('https://lambda-times-api.herokuapp.com/topics')
         const topicTab = newTab(topic)
         document.querySelector('.topics').appendChild(topicTab)
     })
-    console.log(res.data.topics)
+    // console.log(res.data.topics)
 })
 .catch(err => {
     console.log(err)
